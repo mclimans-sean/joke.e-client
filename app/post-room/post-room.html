@@ -1,0 +1,51 @@
+<div class="container">
+  <form ng-submit="$ctrl.createRoom(post, room)">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputName" class="col-form-label">Room name</label>
+        <input type="text"
+          ng-model="$ctrl.room.name"
+          class="form-control"
+          id="inputName" placeholder="Room name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress" class="col-form-label">Address</label>
+      <input type="text"
+        ng-model="$ctrl.room.address"
+        class="form-control"
+        id="inputAddress" placeholder="1234 Main St">
+    </div>
+    <div class="form-group">
+      <label for="inputAddress2" class="col-form-label">Address 2</label>
+      <input type="text"
+        ng-model="$ctrl.room.address_2"
+        class="form-control"
+        id="inputAddress2" placeholder="Suite or floor">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity" class="col-form-label">City</label>
+        <input type="text"
+          ng-model="$ctrl.room.city"
+          class="form-control" id="inputCity">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputState" class="col-form-label">State</label>
+        <input type="text"
+          ng-model="$ctrl.room.state"
+          id="inputState" class="form-control"></input>
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputZip" class="col-form-label">Zip</label>
+        <input type="number"
+          ng-model="$ctrl.room.zip"
+          class="form-control" id="inputZip">
+      </div>
+    </div>
+
+    <button type="submit"
+
+      class="btn btn-primary">Submit</button>
+  </form>
+</div>

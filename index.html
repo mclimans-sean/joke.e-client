@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="jokeE">
+  <head>
+    <meta charset="utf-8">
+    <title>jōke.ē</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <base href="/">
+  </head>
+  <body>
+    <navbar></navbar>
+
+    <ui-view></ui-view>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/0.10.1/angular-moment.min.js" charset="utf-8"></script>
+    <script src="app/app.module.js" charset="utf-8"></script>
+    <script src="app/app.config.js" charset="utf-8"></script>
+    <script src="app/navbar/navbar.component.js" charset="utf-8"></script>
+    <script src="app/navbar/navbar.controller.js" charset="utf-8"></script>
+    <script src="app/home/home.component.js" charset="utf-8"></script>
+    <script src="app/home/home.controller.js" charset="utf-8"></script>
+    <script src="app/post-show/post-show.component.js" charset="utf-8"></script>
+    <script src="app/post-show/post-show.controller.js" charset="utf-8"></script>
+    <script src="app/post-room/post-room.component.js" charset="utf-8"></script>
+    <script src="app/post-room/post-room.controller.js" charset="utf-8"></script>
+    <script src="app/services/rooms.service.js" charset="utf-8"></script>
+  </body>
+</html>

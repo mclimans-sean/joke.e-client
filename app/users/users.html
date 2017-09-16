@@ -1,0 +1,18 @@
+<div class="container-fluid" ng-repeat="user in $ctrl.users">
+  <div class="row">
+    <div class="col">
+      <div class="media-body">
+        <h4 class="media-heading">
+          <a href="#">{{user.name}}</a>
+        </h4>
+        <p>
+          {{user.facebook_id}}
+        </p>
+        <p>
+          {{user.is_comedian}}
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</div>

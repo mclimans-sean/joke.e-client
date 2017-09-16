@@ -1,0 +1,27 @@
+
+<div class="container-fluid death">
+  <div class="container">
+    <a class="nav-link"
+      ui-sref-active="active"
+      ui-sref="post-show"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> Create a show</a>
+  </div>
+</div>
+
+<div class="container-fluid" ng-repeat="show in $ctrl.shows">
+  <div class="row">
+    <div class="col">
+      <div class="media-body">
+        <h4 class="media-heading">
+          <a href="#">{{show.name}}</a>
+        </h4>
+        <p>
+          {{show.date | date : format : fullDate}}
+        </p>
+        <p>
+          {{show.description}}
+        </p>
+        <p>{{show.is_clean}}</p>
+      </div>
+    </div>
+  </div>
+</div>
