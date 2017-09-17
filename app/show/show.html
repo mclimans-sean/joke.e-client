@@ -1,17 +1,16 @@
-<div class="container-fluid list-box" ng-repeat="user in $ctrl.users">
+<div class="container-fluid list-box">
   <div class="row">
     <div class="col">
       <div class="media-body">
         <h4 class="media-heading">
-          <a href="#">{{user.name}}</a>
+          <a ui-sref="home">{{show.name}}</a>
         </h4>
         <p>
-          {{user.facebook_id}}
+          {{show.date | date : format : fullDate}}
         </p>
         <p>
-          {{user.is_comedian}}
+          {{show.description}}
         </p>
-
       </div>
     </div>
   </div>

@@ -7,12 +7,12 @@
   </div>
 </div>
 
-<div class="container-fluid" ng-repeat="show in $ctrl.shows">
+<div class="container-fluid list-box" ng-repeat="show in $ctrl.shows">
   <div class="row">
     <div class="col">
       <div class="media-body">
         <h4 class="media-heading">
-          <a href="#">{{show.name}}</a>
+          <a ui-sref="show({id:{{'show._id'}}})">{{show.name}}</a>
         </h4>
         <p>
           {{show.date | date : format : fullDate}}
@@ -20,7 +20,6 @@
         <p>
           {{show.description}}
         </p>
-        <p>{{show.is_clean}}</p>
       </div>
     </div>
   </div>

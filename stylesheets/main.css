@@ -1,2 +1,19 @@
 @import 'navbar.css';
 @import 'home.css';
+
+body {
+  background-color: #222222;
+}
+
+h1, h2, h3, h4, h5, p {
+  color: #FFFFFF;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.submit {
+  background-color: #FF9900;
+}

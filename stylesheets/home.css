@@ -1,0 +1,15 @@
+.death {
+  border-top: 1px solid #FF9900;
+}
+
+.list-box {
+  border-top: .6px solid #FF9900;
+  border-bottom: .6px solid #FF9900;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  background-color: #444444;
+}
+
+.media-body {
+  margin: .75em;
+}

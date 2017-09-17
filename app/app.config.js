@@ -29,6 +29,14 @@
           url: '/new-room',
           component: 'postRoom'
         })
+        .state('show', {
+          url: '/shows',
+          component: 'show'
+        })
+        .state('users', {
+          url: '/users',
+          component: 'users'
+        })
 
 
       $urlServiceProvider.rules.otherwise({state: 'home'})

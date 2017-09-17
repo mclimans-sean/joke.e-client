@@ -3,19 +3,18 @@
 
   angular
     .module('jokeE')
-    .controller('homeController', homeController)
+    .controller('showController', showController)
 
-    function homeController($http) {
+    function showController($stateParams, $http) {
       const vm = this;
 
-      vm.time = new Date()
-
       vm.$onInit = function () {
-        $http.get('http://localhost:3000/api/shows')
+
+        $http.get('http://localhost:3000/api/shows/' + $stateParams._id)
           .then(function (response) {
             vm.shows = response.data
             console.log(response.data);
-        })
+          })
       }
     }
 }());
