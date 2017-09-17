@@ -1,12 +1,33 @@
 .death {
-  background-color: #666666;
+  background-color: #174F7F;
+  opacity: .7;
 }
 
-.navbar-box {
+/*.navbar-box {
   background-color: #666666;
+}*/
+
+header {
+  display: flex;
+  align-content: center;
+}
+
+.user-image {
+  padding-left: 2em;
+}
+
+.nav-location {
+  padding-left: 4em;
+  align-self: center;
 }
 
 .fa {
   color: #ffffff;
-  font-size: 2.5em;
+  font-size: 5em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+.active {
+  color: orange;
 }

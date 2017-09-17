@@ -30,12 +30,16 @@
           component: 'postRoom'
         })
         .state('show', {
-          url: '/shows',
+          url: '/shows/:id',
           component: 'show'
         })
         .state('users', {
           url: '/users',
           component: 'users'
+        })
+        .state('user', {
+          url: '/users/:id',
+          component: 'oneUser'
         })
 
 

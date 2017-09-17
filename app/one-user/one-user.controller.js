@@ -3,16 +3,16 @@
 
   angular
     .module('jokeE')
-    .controller('showController', showController)
+    .controller('oneUserController', oneUserController)
 
-    function showController($stateParams, $http) {
+    function oneUserController($stateParams, $http) {
       const vm = this;
 
       vm.$onInit = function () {
 
-        $http.get('http://localhost:3000/api/shows/' + $stateParams.id)
+        $http.get('http://localhost:3000/api/users/' + $stateParams.id)
           .then(function (response) {
-            vm.shows = response.data
+            vm.user = response.data
             console.log(response.data);
           })
       }

@@ -1,19 +1,21 @@
 @import 'navbar.css';
 @import 'home.css';
+@import 'footer.css';
 
 body {
-  background-color: #222222;
+  background-color: #0B2840;
 }
 
 h1, h2, h3, h4, h5, p {
   color: #FFFFFF;
+  /*font-size: 2em;*/
+}
+
+p {
+  font-size: 2em;
 }
 
 a {
   color: #FFFFFF;
   text-decoration: none;
-}
-
-.submit {
-  background-color: #FF9900;
 }

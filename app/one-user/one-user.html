@@ -1,15 +1,15 @@
-<div class="container-fluid list-box" ng-repeat="user in $ctrl.users">
+<div class="container-fluid list-box">
   <div class="row">
     <div class="col">
       <div class="media-body">
         <h1 class="media-heading">
-          <a ui-sref="user({id:{{'user._id'}}})">{{user.name}}</a>
+          <a ui-sref="user({id:{{'user._id'}}})">{{$ctrl.user.name}}</a>
         </h1>
         <p>
-          {{user.facebook_id}}
+          {{$ctrl.user.facebook_id}}
         </p>
         <p>
-          {{user.is_comedian}}
+          {{$ctrl.user.is_comedian}}
         </p>
 
       </div>

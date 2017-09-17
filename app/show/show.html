@@ -2,14 +2,23 @@
   <div class="row">
     <div class="col">
       <div class="media-body">
-        <h4 class="media-heading">
-          <a ui-sref="home">{{show.name}}</a>
-        </h4>
+        <h1 class="media-heading">
+          <a ui-sref="home">{{$ctrl.shows.name}}</a>
+        </h1>
         <p>
-          {{show.date | date : format : fullDate}}
+          {{$ctrl.shows.date | date : format : fullDate}}
         </p>
         <p>
-          {{show.description}}
+          {{$ctrl.shows.description}}
+        </p>
+        <p>
+          {{$ctrl.shows.room_id.name}}
+        </p>
+        <p>
+          {{$ctrl.shows.room_id.address}}
+        </p>
+        <p>
+          {{$ctrl.shows.room_id.city}}, {{$ctrl.shows.room_id.state}} {{$ctrl.shows.room_id.zip}}
         </p>
       </div>
     </div>
