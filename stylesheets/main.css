@@ -1,9 +1,13 @@
 @import 'navbar.css';
 @import 'home.css';
 @import 'footer.css';
+@import 'show.css';
+@import 'post-show.css';
+@import 'users.css';
 
 body {
-  background-color: #0B2840;
+  /*background-color: #0B2840;*/
+  background-color: #111111;
 }
 
 h1, h2, h3, h4, h5, p {

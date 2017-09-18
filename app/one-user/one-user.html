@@ -1,9 +1,14 @@
 <div class="container-fluid list-box">
   <div class="row">
-    <div class="col">
+    <div class="col-md-2">
       <div class="media-body">
-        <h1 class="media-heading">
-          <a ui-sref="user({id:{{'user._id'}}})">{{$ctrl.user.name}}</a>
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <div class="media-body">
+        <h1 class="media-heading day">
+          {{$ctrl.user.name}}
         </h1>
         <p>
           {{$ctrl.user.facebook_id}}
@@ -11,6 +16,7 @@
         <p>
           {{$ctrl.user.is_comedian}}
         </p>
+        <p><a href="#"><img src="/images/heckyeah.png" alt="" height="40px"></a><small> heck yeah</small></p>
 
       </div>
     </div>

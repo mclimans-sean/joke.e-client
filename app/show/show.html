@@ -1,26 +1,84 @@
 <div class="container-fluid list-box">
   <div class="row">
-    <div class="col">
+    <div class="col-md-2">
       <div class="media-body">
-        <h1 class="media-heading">
-          <a ui-sref="home">{{$ctrl.shows.name}}</a>
-        </h1>
-        <p>
-          {{$ctrl.shows.date | date : format : fullDate}}
-        </p>
-        <p>
-          {{$ctrl.shows.description}}
-        </p>
-        <p>
-          {{$ctrl.shows.room_id.name}}
-        </p>
-        <p>
-          {{$ctrl.shows.room_id.address}}
-        </p>
-        <p>
-          {{$ctrl.shows.room_id.city}}, {{$ctrl.shows.room_id.state}} {{$ctrl.shows.room_id.zip}}
-        </p>
+        <p>{{$ctrl.shows.date | date: 'MMM'}}</p>
+        <h1 class="day">{{$ctrl.shows.date | date: 'dd'}}</h1>
       </div>
     </div>
+    <div class="col-md-10">
+      <div class="media-body">
+        <h1 class="media-heading">
+          <a class="day" ui-sref="home">{{$ctrl.shows.name | uppercase}}</a>
+        </h1>
+        <br>
+        <h1>
+          {{$ctrl.shows.date | date : 'MMMM d'}}
+        </h1>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="spacer-body">
+        <p class="spacer">______________________________________________________</p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="spacer-body">
+        <p class="booker-label">Show booker: {{$ctrl.shows.booker_id.name}}</p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="spacer-body">
+        <p class="spacer">______________________________________________________</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1">
+        <div class="details">
+          <i class="fa fa-clock-o" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-md-11">
+        <div class="media-body">
+          <p><strong>{{$ctrl.shows.date | date: 'EEEE, MMMM d'}} at {{$ctrl.shows.date | date: 'h:m a'}}</strong></p>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1">
+        <div class="details">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-md-11">
+        <div class="media-body">
+          <p class="day"><strong>{{$ctrl.shows.room_id.name}}</strong></p>
+          <p><small>{{$ctrl.shows.room_id.address}}, {{$ctrl.shows.room_id.city}}, {{$ctrl.shows.room_id.state}} {{$ctrl.shows.room_id.zip}}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid list-box">
+  <div class="row">
+    <div class="col">
+      <div class="media-body">
+        <h2>Description</h2>
+        <p class="spacer">______________________________________________________</p>
+      </div>
+    </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="media-body">
+        <p>{{$ctrl.shows.description}}</p>
+      </div>
+    </div>
+
   </div>
 </div>

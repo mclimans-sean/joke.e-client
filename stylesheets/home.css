@@ -1,5 +1,5 @@
-.death {
-  border-top: 1px solid #298FE5;
+.day {
+  color: orange;
 }
 
 .list-box {
@@ -7,7 +7,8 @@
   border-bottom: .6px solid #298FE5;*/
   margin-top: .5em;
   margin-bottom: .5em;
-  background-color: #2277BF;
+  /*background-color: #2277BF;*/
+  background-color: #333333;
   opacity: .6;
 }
 

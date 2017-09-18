@@ -1,17 +1,25 @@
 
 <div class="container-fluid list-box" ng-repeat="show in $ctrl.shows">
   <div class="row">
-    <div class="col">
+    <div class="col-md-2">
+      <div class="media-body">
+        <p>{{show.date | date: 'MMM'}}</p>
+        <h1 class="day">{{show.date | date: 'dd'}}</h1>
+      </div>
+    </div>
+    <div class="col-md-10">
       <div class="media-body">
         <h1 class="media-heading">
-          <a ui-sref="show({id:{{'show._id'}}})">{{show.name}}</a>
+          <a class="day" ui-sref="show({id:{{'show._id'}}})">{{show.name}}</a>
         </h1>
         <p>
-          {{show.date | date : format : fullDate}}
+          {{show.room_id.name}}
         </p>
-        <p>
-          {{show.description}}
+        <p><small>{{show.room_id.address}}, {{show.room_id.city}} {{show.room_id.state}}</small></p>
+        <p><small>{{show.description}}</small>
+
         </p>
+
       </div>
     </div>
   </div>

@@ -1,0 +1,29 @@
+.spacer-body {
+  align-items: center;
+}
+
+.spacer {
+  color: #2D9FFF;
+  color: #5D5D5D;
+  text-align: center;
+}
+
+.booker-label {
+  text-align: center;
+  color: orange;
+}
+
+.details {
+  margin-left: 2em;
+}
+
+.details .fa {
+  color: #ffffff;
+  font-size: 2em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+.row {
+  align-items: center;
+}
