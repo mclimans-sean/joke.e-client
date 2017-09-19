@@ -1,4 +1,4 @@
-<div class="container-fluid list-box" ng-repeat="show in $ctrl.shows">
+<div class="container-fluid list-box" ng-repeat="show in $ctrl.shows | orderBy: 'date'">
   <div class="row">
     <div class="col-md-2">
       <div class="media-body">
