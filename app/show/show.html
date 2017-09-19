@@ -43,7 +43,7 @@
       </div>
       <div class="col-md-11">
         <div class="media-body">
-          <p><strong>{{$ctrl.shows.date | date: 'EEEE, MMMM d'}} at {{$ctrl.shows.date | date: 'h:m a'}}</strong></p>
+          <p class="day"><strong>{{$ctrl.shows.date | date: 'EEEE, MMMM d'}} at {{$ctrl.shows.date | date: 'h:m' : 'UTC'}}</strong></p>
 
         </div>
       </div>
@@ -68,7 +68,7 @@
   <div class="row">
     <div class="col">
       <div class="media-body">
-        <h2>Description</h2>
+        <h2 class="day">Description</h2>
         <p class="spacer">______________________________________________________</p>
       </div>
     </div>

@@ -1,104 +1,48 @@
 
 <div class="container">
-  <form class="form-horizontal">
-    <fieldset>
-      <legend>Legend</legend>
-      <div class="form-group">
-        <label for="inputName" class="col-lg-2 control-label">Name of show</label>
-        <div class="col-lg-6">
-          <input type="text" class="form-control" id="inputName" placeholder="WHAT IS THE NAME OF YOUR SHOW?!!!!">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputDate" class="col-lg-2 control-label">Date &#38 Time of Show</label>
-        <div class="col-lg-6">
-          <input type="datetime-local" class="form-control" id="inputDate" placeholder="">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> Check box if this show requires clean material
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="textArea" class="col-lg-2 control-label">Description</label>
-        <div class="col-lg-6">
-          <textarea class="form-control" rows="3" id="textArea"></textarea>
-          <span class="help-block">Do what you can to make your show sound appealing.</span>
-        </div>
-      </div>
-      
-      <div class="form-group">
-        <label for="select" class="col-lg-2 control-label">Selects</label>
-        <div class="col-lg-10">
-          <select class="form-control" id="select">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-          <br>
-          <select multiple="" class="form-control">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-lg-10 col-lg-offset-2">
-          <button type="reset" class="btn btn-default">Cancel</button>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-      </div>
-    </fieldset>
-  </form>
-  <!-- <div class="media-body">
+
+  <div class="media-body">
     <header>
-      <h1>Have a new show to post?</h1>
+      <h1 class="day">Have a new show to post?</h1>
     </header>
+    <br>
     <h2>Create one here</h2>
+  </div>
+
+  <div class="container-fluid">
+    <div class="spacer-body">
+      <p class="spacer">______________________________________________________</p>
+    </div>
+  </div>
+  
+  <div class="media-body">
     <form ng-submit="$ctrl.createShow(post, show)">
 
-      <div class="form-group col-md-5">
-          <label for="inputName" class="col-form-label">Show Name</label>
+      <div class="form-group col-lg-8">
+          <label for="inputName" class="col-form-label day">Show Name</label>
           <input type="text"
             ng-model="$ctrl.show.name"
             class="form-control"
             id="inputName" placeholder="Name of show">
       </div>
 
-      <div class="form-row">
-
-        <div class="form-group col-md-3">
-          <label for="inputDate" class="col-form-label">Date</label>
-          <input type="date"
-            ng-model="$ctrl.show.date"
-            class="form-control"
-            id="inputDate" placeholder="12/31/1999">
-        </div>
-        <div class="form-group col-md-2">
-          <label for="inputTime" class="col-form-label">Time</label>
-          <input type="time"
-            ng-model="$ctrl.show.time"
-            class="form-control"
-            id="inputTime" placeholder="07:30 PM">
-        </div>
-
+      <div class="form-group col-lg-5">
+        <label for="inputDate" class="col-form-label day">Date</label>
+        <input type="datetime-local"
+          ng-model="$ctrl.show.date"
+          class="form-control"
+          id="inputDate" placeholder="12/31/1999">
       </div>
 
-      <div class="form-group col-md-5">
-        <label for="inputDescription" class="col-form-label">Description</label>
+      <div class="form-group col-lg-8">
+        <label for="inputDescription" class="col-form-label day">Description</label>
         <input type="text"
           ng-model="$ctrl.show.description"
           class="form-control"
           id="inputDescription" placeholder="Hype your show">
       </div>
 
-      <div class="form-group col-md-4">
+      <div class="form-group col-lg-4">
         <label for="inputRoom" class="col-form-label">Room id</label>
         <input type="text"
           ng-model="$ctrl.show.room_id"
@@ -106,10 +50,10 @@
           id="inputRoom" placeholder="Room id">
       </div>
 
-  TODO: create drop down form for creating rooms
-  TODO: check out autocomplete for existing rooms
+  <!-- TODO: create drop down form for creating rooms
+      TODO: check out autocomplete for existing rooms -->
 
-      <div class="form-group">
+      <div class="form-group col-lg-8">
         <select class="form-control"
           ng-model="$ctrl.service.name"
           ng-options="key as value for (key , value) in $ctrl.options">
@@ -122,7 +66,7 @@
           ui-sref="post-room">Create a new room/venue</a>
       </div>
 
-      <div class="form-group">
+      <div class="form-group col-lg-2">
         <div class="form-check">
           <label class="form-check-label">
             <input class="form-check-input"
@@ -132,8 +76,7 @@
         </div>
       </div>
       <button type="submit"
-        class="btn btn-primary">Submit</button>
+        class="btn btn-primary show-form">Submit</button>
     </form>
-  </div> -->
-
+  </div>
 </div>
