@@ -3,11 +3,11 @@
 
   angular
     .module('jokeE')
-    .controller('footerController', footerController)
+    .controller('FooterController', FooterController)
 
-    function footerController() {
+    function FooterController() {
       const vm = this;
 
-      
+
     }
 }());

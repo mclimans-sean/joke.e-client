@@ -3,12 +3,10 @@
 
   angular
     .module('jokeE')
-    .controller('HomeController', HomeController)
+    .controller('MyShowsController', MyShowsController)
 
-    function HomeController($http) {
+    function MyShowsController($http) {
       const vm = this;
-
-      vm.time = new Date()
 
       vm.$onInit = function () {
         $http.get('http://localhost:3000/api/shows')

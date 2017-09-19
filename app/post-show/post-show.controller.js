@@ -3,9 +3,9 @@
 
   angular
     .module('jokeE')
-    .controller('postShowController', postShowController)
+    .controller('PostShowController', PostShowController)
 
-    function postShowController($http, roomsService) {
+    function PostShowController($http, roomsService) {
       const vm = this;
 
       vm.service = roomsService;

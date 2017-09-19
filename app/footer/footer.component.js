@@ -4,8 +4,8 @@
   angular
     .module('jokeE')
     .component('footer', {
-      controller: 'footerController',
+      controller: 'FooterController',
       templateUrl: 'app/footer/footer.html'
     })
-    
+
 }());

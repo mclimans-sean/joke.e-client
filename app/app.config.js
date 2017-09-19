@@ -21,6 +21,10 @@
           url: '/login',
           component: 'login'
         })
+        .state('my-shows', {
+          url: '/my-shows',
+          component: 'myShows'
+        })
         .state('post-show', {
           url: '/new-show',
           component: 'postShow'

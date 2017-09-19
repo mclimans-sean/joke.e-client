@@ -4,7 +4,7 @@
   angular
     .module('jokeE')
     .component('navbar', {
-      controller: 'navbarController',
+      controller: 'NavbarController',
       templateUrl: 'app/navbar/navbar.html'
     })
 

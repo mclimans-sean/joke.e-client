@@ -3,10 +3,10 @@
 
   angular
     .module('jokeE')
-    .controller('navbarController', navbarController)
+    .controller('NavbarController', NavbarController)
 
-    function navbarController() {
+    function NavbarController() {
       const vm = this;
-      
+
     }
 }());

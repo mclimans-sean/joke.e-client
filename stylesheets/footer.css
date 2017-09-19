@@ -3,3 +3,10 @@
   bottom: 0;
   width: 100%;
 }
+
+.heck-yeah {
+  align-self: auto;
+  margin-top: 1.7em;
+  /*padding-top: 2.5em;*/
+  /*padding-bottom: .5em;*/
+}

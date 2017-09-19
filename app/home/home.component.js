@@ -4,7 +4,7 @@
   angular
     .module('jokeE')
     .component('home', {
-      controller: 'homeController',
+      controller: 'HomeController',
       templateUrl: 'app/home/home.html'
     })
 }());

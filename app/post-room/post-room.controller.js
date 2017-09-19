@@ -3,9 +3,9 @@
 
   angular
     .module('jokeE')
-    .controller('postRoomController', postRoomController)
+    .controller('PostRoomController', PostRoomController)
 
-    function postRoomController($http) {
+    function PostRoomController($http) {
       const vm = this;
 
       vm.createRoom = function (post, room) {
