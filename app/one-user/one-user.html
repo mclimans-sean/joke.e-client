@@ -1,24 +1,29 @@
 <div class="container-fluid list-box">
   <div class="row">
-    <div class="col-md-2">
+    <div class="col-md-4">
       <div class="media-body">
-        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+        <img class="user-photo" src="http://www.fillmurray.com/300/300" alt="">
       </div>
     </div>
-    <div class="col-md-10">
-      <div class="media-body">
-        <h1 class="media-heading day">
-          {{$ctrl.user.name}}
-        </h1>
-        <p>
-          {{$ctrl.user.facebook_id}}
-        </p>
-        <p>
-          {{$ctrl.user.is_comedian}}
-        </p>
-
-
+    <div class="col-md-8">
+      <div class="media-body contact">
+        <a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
       </div>
+    </div>
+  </div>
+  <div class="col-md-10">
+    <div class="media-body">
+      <h1 class="user-heading day">
+        {{$ctrl.user.name}}
+      </h1>
+      <p class="username"><small>{{$ctrl.user.facebook_id}}</small>
+
+      </p>
+      <p class="bio">
+        {{$ctrl.user.bio}}
+      </p>
+
+
     </div>
   </div>
 </div>
@@ -36,7 +41,7 @@
       <li class="nav-item">
         <a class="nav-link"
           ui-sref-active="active"
-          ui-sref="home"><i class="fa fa-times" aria-hidden="true"></i></a>
+          ui-sref="users"><i class="fa fa-times" aria-hidden="true"></i></a>
       </li>
     </ul>
 

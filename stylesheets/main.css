@@ -4,6 +4,7 @@
 @import 'show.css';
 @import 'post-show.css';
 @import 'users.css';
+@import 'one-user.css';
 
 body {
   /*background-color: #0B2840;*/
@@ -12,7 +13,7 @@ body {
 
 h1, h2, h3, h4, h5, p {
   color: #FFFFFF;
-  /*font-size: 2em;*/
+
 }
 
 p {

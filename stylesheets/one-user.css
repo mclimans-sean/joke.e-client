@@ -1,0 +1,23 @@
+.user-photo {
+  clip-path: circle(150px at center);
+  padding: 20px;
+}
+
+.user-heading {
+  font-size: 4em;
+}
+
+.contact  {
+  text-align: justify;
+  padding-left: 20%;
+}
+
+.username p {
+  color: #9D9D9D;
+}
+
+.bio {
+  padding-top: 1em;
+  padding-bottom: 2em;
+  padding-left: 1em;
+}
