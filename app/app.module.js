@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('jokeE', ['ui.router', 'ui.bootstrap', 'angularMoment', 'duScroll'])
+    .module('jokeE', ['ui.router', 'ui.bootstrap', 'angularMoment', 'duScroll', 'ui.router.title'])
 
 }());
