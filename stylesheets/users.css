@@ -4,3 +4,12 @@
   padding-top: .5em;
   padding-bottom: .5em;
 }
+
+.user-photo-sm {
+  clip-path: circle(100px at center);
+  padding: 20px;
+}
+
+.user-list {
+  align-items: center;
+}

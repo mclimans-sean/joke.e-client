@@ -1,11 +1,11 @@
 <div class="container-fluid list-box" ng-repeat="user in $ctrl.users">
-  <div class="row">
-    <div class="col-md-2">
-      <div class="media-body">
-        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+  <div class="row user-list">
+    <div class="col-md-4">
+      <div class="media-body-users">
+        <img class="user-photo-sm" src="{{user.profile_pic}}" alt="">
       </div>
     </div>
-    <div class="col-md-10">
+    <div class="col-md-8">
       <div class="media-body">
         <h1 class="media-heading">
           <a class="day" ui-sref="user({id:{{'user._id'}}})">{{user.name}}</a>
@@ -14,7 +14,7 @@
           {{user.facebook_id}}
         </p>
         <p>
-          {{user.is_comedian}}
+          {{user.city}}, {{user.state}}
         </p>
 
       </div>

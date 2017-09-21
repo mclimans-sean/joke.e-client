@@ -1,5 +1,5 @@
 .death {
-  background-color: #5D5D5D;  
+  background-color: #5D5D5D;
 }
 
 
@@ -33,4 +33,12 @@ li a .fa {
 
 .active {
   color: orange;
+}
+
+#head-title {
+  font-size: 4em;
+}
+
+.user-photo-xsm{
+  clip-path: circle(75px at center);
 }
