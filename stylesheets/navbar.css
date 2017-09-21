@@ -1,12 +1,7 @@
 .death {
-  /*background-color: #174F7F;*/
-  background-color: #5D5D5D;
-  opacity: .7;
+  background-color: #5D5D5D;  
 }
 
-/*.navbar-box {
-  background-color: #666666;
-}*/
 
 header {
   display: flex;
