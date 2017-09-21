@@ -5,7 +5,7 @@
     .module('jokeE')
     .config(config)
 
-    config.$inject = ['$stateProvider', '$urlServiceProvider', '$locationProvider']
+    config.$inject = ['$stateProvider', '$urlServiceProvider', '$locationProvider', '$titleProvider']
 
     function config($stateProvider, $urlServiceProvider, $locationProvider, $titleProvider){
 
@@ -16,8 +16,10 @@
         .state('home', {
           url: '/home',
           component: 'home',
-          resolve: function() {
-            $title: 'Home'
+          resolve: {
+            $title: function () {
+              return 'Home';
+            }
           }
         })
         .state('login', {
@@ -26,9 +28,13 @@
           data : { pageTitle: 'Login' }
         })
         .state('my-shows', {
-          title: 'My Upcoming shows',
           url: '/my-shows',
-          component: 'myShows'
+          component: 'myShows',
+          resolve: {
+            $title: function () {
+              return 'Schedule';
+            }
+          }
         })
         .state('post-show', {
           title: 'New Show',
@@ -58,6 +64,8 @@
 
       $urlServiceProvider.rules.otherwise({state: 'home'})
 
-
+      $titleProvider.documentTitle(function($rootScope) {
+      return $rootScope.$title ? $rootScope.$title + " - jōke.ē" : "jōke.ē";
+    });
     }
 }());
