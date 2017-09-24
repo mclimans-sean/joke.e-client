@@ -5,9 +5,9 @@
     .module('jokeE')
     .config(config)
 
-    config.$inject = ['$stateProvider', '$urlServiceProvider', '$locationProvider', '$titleProvider']
+    config.$inject = ['$stateProvider', '$urlServiceProvider', '$locationProvider']
 
-    function config($stateProvider, $urlServiceProvider, $locationProvider, $titleProvider){
+    function config($stateProvider, $urlServiceProvider, $locationProvider){
 
       // this line is optional
       $locationProvider.html5Mode(true)
@@ -64,8 +64,5 @@
 
       $urlServiceProvider.rules.otherwise({state: 'home'})
 
-      $titleProvider.documentTitle(function($rootScope) {
-      return $rootScope.$title ? $rootScope.$title + " - jōke.ē" : "jōke.ē";
-    });
     }
 }());
