@@ -1,0 +1,55 @@
+<div class="container death">
+  <form ng-submit="$ctrl.register()">
+    <div class="form-group">
+      <label class="form-control-label" for="inputName">Name</label>
+      <input type="text"
+        ng-model="$ctrl.user.name"
+        class="form-control" id="inputName"
+        placeholder="Example input">
+    </div>
+
+    <div class="form-group">
+      <label class="form-control-label" for="inputFacebookId">facebook id</label>
+      <input type="text"
+        ng-model="$ctrl.user.facebook_id"
+        class="form-control" id="inputFacebookId"
+        placeholder="Another input">
+    </div>
+
+    <div class="form-group-lg">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email"
+        ng-model="$ctrl.user.email"
+        class="form-control" id="exampleInputEmail1"
+        aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <div class="form-group-lg">
+      <label for="inputPassword">Password</label>
+      <input type="password"
+        ng-model="$ctrl.user.password"
+        class="form-control" id="inputPassword"
+        placeholder="Password">
+    </div>
+
+    <div class="form-group-lg">
+      <label for="confirmPassword">Confirm password</label>
+      <input type="password"
+        ng-model="$ctrl.user.confirmPassword"
+        class="form-control" id="confirmPassword"
+        placeholder="Password">
+    </div>
+
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="checkbox"
+          ng-model="$ctrl.user.is_comedian"
+          default="false"
+          class="form-check-input">
+        Check me out
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

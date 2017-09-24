@@ -16,16 +16,23 @@
         .state('home', {
           url: '/home',
           component: 'home',
-          resolve: {
-            $title: function () {
-              return 'Home';
-            }
+          data: {
+            pageTitle: 'Home'
+          }
+        })
+        .state('register', {
+          url: '/register',
+          component: 'register',
+          data: {
+            pageTitle: 'Register'
           }
         })
         .state('login', {
           url: '/login',
           component: 'login',
-          data : { pageTitle: 'Login' }
+          data : {
+            pageTitle: 'Login'
+          }
         })
         .state('my-shows', {
           url: '/my-shows',
