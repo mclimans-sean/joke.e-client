@@ -4,8 +4,8 @@
   angular
     .module('jokeE')
     .component('login', {
-      controller: controller,
+      controller: 'LoginController',
       templateUrl: 'app/login/login.html'
     })
-    
+
 }());
