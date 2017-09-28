@@ -37,10 +37,8 @@
         .state('my-shows', {
           url: '/my-shows',
           component: 'myShows',
-          resolve: {
-            $title: function () {
-              return 'Schedule';
-            }
+          data: {
+            pageTitle: 'Schedule'
           }
         })
         .state('post-show', {
@@ -69,7 +67,7 @@
         })
 
 
-      $urlServiceProvider.rules.otherwise({state: 'home'})
+      $urlServiceProvider.rules.otherwise({state: 'login'})
 
     }
 }());

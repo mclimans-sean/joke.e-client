@@ -1,9 +1,26 @@
+<div class="container">
+  <h1>Registration</h1>
+</div>
+<div class="container">
+  <div
+    ng-if="$ctrl.message"
+    class="alert alert-success" role="alert">
+    <p>{{$ctrl.message}}</p>
+  </div>
+</div>
+
+<div
+  ng-if="$ctrl.error"
+  class="alert alert-danger" role="alert">
+  <p>{{$ctrl.error}}</p>
+</div>
+
 <div class="container death">
-  <form ng-submit="$ctrl.register()">
+  <form ng-hide="$ctrl.message" ng-submit="$ctrl.register()">
     <div class="form-group">
       <label class="form-control-label" for="inputName">Name</label>
       <input type="text"
-        ng-model="$ctrl.user.name"
+        ng-model="$ctrl.name"
         class="form-control" id="inputName"
         placeholder="Example input">
     </div>
@@ -11,7 +28,7 @@
     <div class="form-group">
       <label class="form-control-label" for="inputFacebookId">facebook id</label>
       <input type="text"
-        ng-model="$ctrl.user.facebook_id"
+        ng-model="$ctrl.facebook_id"
         class="form-control" id="inputFacebookId"
         placeholder="Another input">
     </div>
@@ -19,7 +36,7 @@
     <div class="form-group-lg">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email"
-        ng-model="$ctrl.user.email"
+        ng-model="$ctrl.email"
         class="form-control" id="exampleInputEmail1"
         aria-describedby="emailHelp" placeholder="Enter email">
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
@@ -28,7 +45,7 @@
     <div class="form-group-lg">
       <label for="inputPassword">Password</label>
       <input type="password"
-        ng-model="$ctrl.user.password"
+        ng-model="$ctrl.password"
         class="form-control" id="inputPassword"
         placeholder="Password">
     </div>
@@ -36,20 +53,12 @@
     <div class="form-group-lg">
       <label for="confirmPassword">Confirm password</label>
       <input type="password"
-        ng-model="$ctrl.user.confirmPassword"
+        ng-model="$ctrl.confirmPassword"
         class="form-control" id="confirmPassword"
         placeholder="Password">
     </div>
 
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="checkbox"
-          ng-model="$ctrl.user.is_comedian"
-          default="false"
-          class="form-check-input">
-        Check me out
-      </label>
-    </div>
+    
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>

@@ -5,35 +5,46 @@
     .module('jokeE')
     .controller('LoginController', LoginController)
 
-    function LoginController($http) {
+    function LoginController($http, $location, $window, AuthFactory) {
       const vm = this;
 
-      vm.login = function (post, user) {
-
-        $http({
-          method: 'POST',
-          url: 'http://localhost:3000/api/auth/login',
-          data: {
-            email: vm.user.email,
-            password: vm.user.password
-          }
-        })
+      vm.isLoggedIn = function () {
+        if (AuthFactory.isLoggedIn) {
+          return true;
+        } else {
+          return false;
+        }
       }
 
-      // vm.$onInit = function () {
-      //   $httpProvider.interceptors.push(function($q, $location) {
-      //     return {
-      //       response: function(response) {
-      //         // do something on success
-      //         return response;
-      //       },
-      //       responseError: function(response) {
-      //         if (response.status === 401)
-      //           $location.url('/login');
-      //         return $q.reject(response);
-      //       }
-      //     };
-      //   });
-      // }
+      vm.login = function () {
+        if (vm.email && vm.password) {
+          var user = {
+            email: vm.email,
+            password: vm.password
+          }
+          $http.post('http://localhost:3000/api/users/login', user).then(function (response) {
+            console.log(response);
+            if (response.data.success) {
+              $window.sessionStorage.token = response.data.token;
+              AuthFactory.isLoggedIn = true;
+            }
+          }).catch(function (error) {
+            console.log(error);
+          })
+        }
+      }
+
+      vm.logout = function () {
+        AuthFactory.isLoggedIn = false;
+        delete $window.sessionStorage.token;
+        $location.path('/login')
+      }
+
+      vm.isActiveTab = function (url) {
+        var currentPath = $location.path().split('/')[1];
+        return (url === currentPath ? 'active' : '')
+      }
+
+
     }
 }());
