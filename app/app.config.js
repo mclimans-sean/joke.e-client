@@ -16,6 +16,7 @@
         .state('home', {
           url: '/home',
           component: 'home',
+          authenticate: false,
           data: {
             pageTitle: 'Home'
           }
@@ -23,6 +24,7 @@
         .state('register', {
           url: '/register',
           component: 'register',
+          authenticate: false,
           data: {
             pageTitle: 'Register'
           }
@@ -30,6 +32,7 @@
         .state('login', {
           url: '/login',
           component: 'login',
+          authenticate: false,
           data : {
             pageTitle: 'Login'
           }
@@ -37,18 +40,20 @@
         .state('my-shows', {
           url: '/my-shows',
           component: 'myShows',
+          authenticate: true,
           data: {
             pageTitle: 'Schedule'
           }
         })
         .state('post-show', {
-          title: 'New Show',
           url: '/new-show',
-          component: 'postShow'
+          component: 'postShow',
+          authenticate: true,
         })
         .state('post-room', {
           url: '/new-room',
-          component: 'postRoom'
+          component: 'postRoom',
+          authenticate: true,
         })
         .state('show', {
           title: 'Show',
@@ -61,9 +66,9 @@
           component: 'users'
         })
         .state('user', {
-          title: 'Comedian Profile',
           url: '/users/:id',
-          component: 'oneUser'
+          component: 'oneUser',
+          authenticate: true
         })
 
 
