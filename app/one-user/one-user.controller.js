@@ -13,7 +13,7 @@
         $http.get('http://localhost:3000/api/users/' + $stateParams.id)
           .then(function (response) {
             vm.user = response.data
-            console.log(response.data);
+            
           })
       }
     }

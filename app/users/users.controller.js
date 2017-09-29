@@ -13,7 +13,6 @@
           .then(function (response) {
             vm.users = response.data
 
-            console.log(response.data);
         })
       }
     }
